@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Relational Database",
+    "category": "PERSISTENCE",
+    "mavenArtifacts": ["spring-boot-starter-data-jpa", "hibernate-core", "mysql-connector-java", "postgresql"],
+    "heuristics": [
+      "jdbc:(postgresql|mysql|sqlserver|oracle|mariadb|db2)",
+      "spring\\.datasource\\.url"
+    ]
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "PERSISTENCE",
+    "heuristics": ["5432"]
+  },
+  {
+    "name": "MySQL/MariaDB",
+    "category": "PERSISTENCE",
+    "heuristics": ["3306"]
+  },
+  {
+    "name": "MongoDB",
+    "category": "PERSISTENCE",
+    "heuristics": ["(27017|mongodb://)"]
+  },
+  {
+    "name": "Redis",
+    "category": "PERSISTENCE",
+    "mavenArtifacts": ["spring-boot-starter-data-redis", "jedis", "lettuce-core"],
+    "heuristics": ["(6379|redis://)"]
+  },
+  {
+    "name": "Apache Kafka",
+    "category": "MESSAGING",
+    "mavenArtifacts": ["spring-kafka", "kafka-clients"],
+    "heuristics": ["(9092|kafka)"]
+  },
+  {
+    "name": "RabbitMQ",
+    "category": "MESSAGING",
+    "mavenArtifacts": ["spring-rabbit", "amqp-client"],
+    "heuristics": ["(5672|amqp://)"]
+  },
+  {
+    "name": "Amazon SQS/SNS",
+    "category": "MESSAGING",
+    "mavenArtifacts": ["aws-java-sdk-sqs", "aws-java-sdk-sns", "amazon-sqs-java-messaging-lib"],
+    "heuristics": ["(amazonaws\\.com/(sqs|sns)|sqs://)"]
+  },
+  {
+    "name": "Amazon S3",
+    "category": "CLOUD_SERVICES",
+    "mavenArtifacts": ["aws-java-sdk-s3", "software.amazon.awssdk:s3"],
+    "heuristics": ["s3://"]
+  },
+  {
+    "name": "Amazon DynamoDB",
+    "category": "CLOUD_SERVICES",
+    "mavenArtifacts": ["aws-java-sdk-dynamodb", "software.amazon.awssdk:dynamodb"],
+    "heuristics": ["dynamodb"]
+  },
+  {
+    "name": "Google Pub/Sub",
+    "category": "CLOUD_SERVICES",
+    "mavenArtifacts": ["google-cloud-pubsub"],
+    "heuristics": ["pubsub"]
+  },
+  {
+    "name": "HTTP APIs",
+    "category": "WEB",
+    "mavenArtifacts": ["spring-boot-starter-web", "spring-webflux", "feign-core", "retrofit"],
+    "heuristics": [
+      "https?://[\\w\\.-]*(api|service|cloud)[\\w\\.-]*",
+      "RestTemplate|WebClient|FeignClient"
+    ]
+  }
+]
