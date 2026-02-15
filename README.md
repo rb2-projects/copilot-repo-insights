@@ -4,16 +4,16 @@
 
 A CLI tool that analyzes Java/Maven/Gradle projects and generates comprehensive insight reports. Works standalone with deterministic analysis, or supercharged with **GitHub Copilot CLI** for natural-language architectural summaries and AI-driven recommendations.
 
-> 🏆 Built for the [GitHub 2026 Copilot Challenge](https://dev.to/challenges/github-2026-01-21)
+> Built for the [GitHub 2026 Copilot Challenge](https://dev.to/challenges/github-2026-01-21)
 
-## 🎯 Use Cases
+## Use Cases
 
 - **New to a project?** Understand architecture, test coverage, and dependencies in minutes
 - **Need to fix/enhance code?** Get full context before diving into unfamiliar code
 - **Managing multiple repos?** Standardize insights and track quality across your organization
 - **Tracking tech quality?** Assess architecture, test coverage, and tech debt across your portfolio
 
-## ✨ Features
+## Features
 
 ### Deterministic Analysis (Always Available)
 - **Build & Language Detection** - Maven, Gradle, Java identification
@@ -34,7 +34,7 @@ A CLI tool that analyzes Java/Maven/Gradle projects and generates comprehensive 
 - **Markdown Reports** - Git-friendly, readable format
 - **Mermaid Diagrams** - Visual representations of project hygiene and architecture
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -69,7 +69,7 @@ This adds:
 - Intelligent architectural analysis
 - Context-aware recommendations
 
-## 📊 Report Contents
+## Report Contents
 
 Generated reports include:
 
@@ -82,7 +82,7 @@ Generated reports include:
 7. **External Dependencies** - All detected external systems the project depends on
 8. **Maintainability Rating** - Overall assessment of code maintainability
 
-## 🧪 Quality Assurance
+## Quality Assurance
 
 This project practices what it preaches:
 - **50+ Unit Tests** covering core functionality
@@ -95,20 +95,20 @@ Run tests locally:
 mvn clean test
 ```
 
-## 🏗️ How It Works
+## How It Works
 
 1. **Scan** - Analyzes repository structure, build files, and source code
 2. **Analyze** - Deterministically detects capabilities, patterns, and risks
 3. **Enhance** (Optional) - Uses Copilot CLI to generate natural-language insights
 4. **Report** - Generates beautiful, actionable reports in multiple formats
 
-## 📋 Supported Project Types
+## Supported Project Types
 
 - **Maven Projects** (pom.xml)
 - **Gradle Projects** (build.gradle, build.gradle.kts)
 - **Java Source Code** (automatic detection)
 
-## 🔍 What Gets Detected
+## What Gets Detected
 
 ### Build & Tooling
 - Build system (Maven, Gradle)
@@ -128,7 +128,7 @@ mvn clean test
 - Potential architectural risks
 - Code organization metrics
 
-## 💡 Example Output
+## Example Output
 
 ### Without Copilot:
 ```
@@ -154,7 +154,7 @@ Top Architectural Risks:
 [AI-identified patterns and concerns]
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Areas for enhancement:
 - Additional language support
@@ -162,11 +162,11 @@ Contributions welcome! Areas for enhancement:
 - Enhanced AI prompt templates
 - Better visualization options
 
-## 📝 License
+## License
 
 [Include your license here]
 
-## 🎓 Learning Resources
+## Learning Resources
 
 - [GitHub Copilot CLI Official Repository](https://github.com/github-copilot/cli)
 - [GitHub Copilot CLI Getting Started](https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli)
