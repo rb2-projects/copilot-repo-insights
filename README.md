@@ -102,6 +102,34 @@ mvn clean test
 3. **Enhance** (Optional) - Uses Copilot CLI to generate natural-language insights
 4. **Report** - Generates beautiful, actionable reports in multiple formats
 
+## Configuration
+
+### Customizing AI Prompts
+
+All AI prompts are stored in `src/main/resources/prompts.properties`, making it easy to customize analysis behavior without recompiling:
+
+```properties
+# Architectural overview prompt
+prompt.architectural.overview=Provide a technical project overview...
+
+# Project overview prompt with variable substitution
+prompt.project.overview=Analyze this repository and write a 2-3 sentence overview...
+
+# Comprehensive analysis template
+prompt.comprehensive.analysis=Analyze this Java repository comprehensively...
+```
+
+**To customize prompts:**
+1. Edit `src/main/resources/prompts.properties`
+2. Rebuild: `mvn clean package`
+3. Prompts are loaded at runtime from the properties file
+
+This approach allows:
+- Easy prompt tuning without code changes
+- Version control of prompt evolution
+- Sharing optimized prompts across teams
+- A/B testing different prompt strategies
+
 ## Supported Project Types
 
 - **Maven Projects** (pom.xml)
