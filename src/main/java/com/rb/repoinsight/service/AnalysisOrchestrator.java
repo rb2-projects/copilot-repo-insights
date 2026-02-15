@@ -78,7 +78,7 @@ public class AnalysisOrchestrator {
             context.setCopilotAvailable(true);
             context.setCopilotOutput(cleanCopilotOutput(analysis.trim()));
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             context.setCopilotAvailable(false);
             context.setCopilotFailureReason("AI Analysis Failed: " + e.getMessage());
             System.err.println("AI Analysis error: " + e.getMessage());

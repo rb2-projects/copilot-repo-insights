@@ -110,7 +110,7 @@ public class JaCoCoParser {
             System.out.println("JaCoCo analysis complete.");
             return true;
 
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             System.err.println("Failed to run JaCoCo: " + e.getMessage());
             return false;
         }

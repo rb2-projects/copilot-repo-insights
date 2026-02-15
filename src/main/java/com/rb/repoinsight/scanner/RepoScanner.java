@@ -53,7 +53,7 @@ public class RepoScanner {
                 context.setCopilotFailureReason(
                         "Copilot CLI returned no output (exit code " + exitCode + ")");
             }
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             context.setCopilotAvailable(false);
             context.setCopilotFailureReason(e.getMessage());
         }
