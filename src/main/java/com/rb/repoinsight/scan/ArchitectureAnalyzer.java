@@ -12,7 +12,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import com.rb.repoinsight.model.ProjectModule;
 import com.rb.repoinsight.model.RepoContext;
@@ -175,20 +174,6 @@ public class ArchitectureAnalyzer {
         if (!context.isCopilotAvailable() || context.getProjectModules().isEmpty()) {
             return;
         }
-
-        // Build a structured prompt for Copilot
-        String moduleList = context.getProjectModules().stream()
-                .map(m -> String.format("- %s: packages %s", m.getName(), 
-                        String.join(", ", m.getTopLevelPackages())))
-                .collect(Collectors.joining("\n"));
-
-        String prompt = String.format(
-                "Given this project's module structure, provide a brief one-line description for each module's purpose:\n" +
-                "%s\n\n" +
-                "Format your response as:\n" +
-                "module-name: brief description\n\n" +
-                "Keep descriptions under 10 words each.",
-                moduleList);
 
         try {
             // Use existing Copilot output if available, or make a new request

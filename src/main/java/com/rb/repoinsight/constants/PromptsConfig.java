@@ -3,6 +3,7 @@ package com.rb.repoinsight.constants;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.rb.repoinsight.model.RepoContext;
@@ -43,7 +44,7 @@ public class PromptsConfig {
                 LOGGER.warning("prompts.properties not found in resources");
             }
         } catch (IOException e) {
-            LOGGER.warning("Failed to load prompts.properties: " + e.getMessage());
+            LOGGER.log(Level.WARNING, "Failed to load prompts.properties: {0}", e.getMessage());
         }
         return props;
     }
@@ -54,7 +55,7 @@ public class PromptsConfig {
     private static String getProperty(String key) {
         String value = properties.getProperty(key);
         if (value == null) {
-            LOGGER.warning("Prompt key not found: " + key);
+            LOGGER.log(Level.WARNING, "Prompt key not found: {0}", key);
             return "";
         }
         // Handle escaped newlines in properties file
